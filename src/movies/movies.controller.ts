@@ -20,13 +20,6 @@ export class MoviesController {
     createMovie(@Body() movieData: CreateMovieDto) {
         return this.moviesService.createMovie(movieData);
     }
-
-    // search는 nestjs param이 없을 때 id로 읽음. 따라서 /:id 위에 작성.
-    // 
-    @Get('/search')
-    search(@Query('year') searchingYear: string) {
-        return 'This will search by year';
-    }
  
     @Get('/:id')
     getById(@Param('id') id: number){

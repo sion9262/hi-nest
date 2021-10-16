@@ -7,7 +7,6 @@ import { Movie } from './entities/movie.entity';
 export class MoviesService {
     private movies: Movie[] = [];
 
-
     getAll() {
         return this.movies;
     }
@@ -18,8 +17,6 @@ export class MoviesService {
             ...movieData
         })
     }
-
-    search(){}
 
     getById(id: number): Movie{
         const movie =  this.movies.find(movie => movie.id === id);
